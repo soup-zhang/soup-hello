@@ -16,8 +16,11 @@ import (
 
 func main() {
 	fmt.Println("main start ...")
+	fmt.Println("main start 222 ...")
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		_, _ = fmt.Fprintf(w, "Soup Hello, %q", html.EscapeString(r.URL.Path))
 	})
 	log.Fatal(http.ListenAndServe(":8080", nil))
+
+
 }
